@@ -55,7 +55,8 @@ Traditional methods of evaluating funding potential often rely on subjective jud
 5. **Relationships Data (relationships.csv):** This dataset details the connections between people, indicating potential networking effects within the startup ecosystem.
    - **Key Fields:** `relationship_id`, `person_object_id`, `relationship_object_id`, `start_at`, `end_at`, `is_past`, `sequence`, `title`, `created_at`, `updated_at`
 6. **Funding Rounds Data (funding_rounds.csv):** This dataset includes detailed information about various funding rounds that startups have gone through.
-   - **Key Fields:** `id`, `funding_round_id`, `object_id`, `funded_at`, `funding_round_type`, `funding_round_code`, `raised_amount_usd`, `raised_currency_code`, `pre_money_valuation_usd`, `post_money_valuation_usd`, `participants`, `is_first_round`, `is_last_round`, `source_url`, `source_description`, `created_by`, `created_at`, `updated_at
+   - **Key Fields:** `id`, `funding_round_id`, `object_id`, `funded_at`, `funding_round_type`, `funding_round_code`, `raised_amount_usd`, `raised_currency_code`, `pre_money_valuation_usd`, `post_money_valuation_usd`, `participants`, `is_first_round`, `is_last_round`, `source_url`, `source_description`, `created_by`, `created_at`, `updated_at`
+
 
 **Data Quality Concerns:**
 - **Missing Values:** Identified and handled missing values in key fields.
@@ -131,7 +132,27 @@ Traditional methods of evaluating funding potential often rely on subjective jud
 | updated_at       | Date when the relationship record was last updated |
 
 
-
+#### Funding Rounds Data
+| Field Name             | Description                                  |
+|------------------------|----------------------------------------------|
+| id                     | Unique identifier for the record             |
+| funding_round_id       | Unique identifier for the funding round      |
+| object_id              | Unique identifier for the funded entity      |
+| funded_at              | Date when the funding was secured            |
+| funding_round_type     | Type of funding round (e.g., series-a, series-b) |
+| funding_round_code     | Code of the funding round                    |
+| raised_amount_usd      | Amount raised in USD                         |
+| raised_currency_code   | Currency code of the raised amount           |
+| pre_money_valuation_usd| Pre-money valuation in USD                   |
+| post_money_valuation_usd| Post-money valuation in USD                 |
+| participants           | Number of participants in the funding round  |
+| is_first_round         | Indicator if this is the first round         |
+| is_last_round          | Indicator if this is the last round          |
+| source_url             | URL of the source                            |
+| source_description     | Description of the source                    |
+| created_by             | Creator of the record                        |
+| created_at             | Date when the record was created             |
+| updated_at             | Date when the record was last updated        |
 ### Next Steps
 
 **Data Processing:**
