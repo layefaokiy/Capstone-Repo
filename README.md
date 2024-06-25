@@ -156,16 +156,42 @@ Traditional methods of evaluating funding potential often rely on subjective jud
 ### Next Steps
 
 **Data Processing:**
-- Clean and preprocess the data to handle missing values, outliers, and inconsistencies.
+- **Data Sources**: Multiple datasets from Crunchbase including funding rounds, startup information, and founder details.
+   - **Preprocessing Steps**:
+     - Merging datasets based on common keys.
+     - Handling missing values and duplicates.
+     - One-hot encoding categorical variables.
+     - Scaling numeric features.
+     - Addressing class imbalance using SMOTE.
 
 **Feature Engineering:**
-- Create new features from existing data (e.g., time-based features, interaction terms).
+-    - One-hot encoding categorical variables.
+     - Scaling numeric features.
+     - Addressing class imbalance using SMOTE.
 
 **Baseline Modeling:**
-- Develop initial machine learning models to predict funding potential. Evaluate models using cross-validation and baseline metrics.
+- - **Baseline Models**: Logistic Regression.
+   - **Evaluation Metrics**: Accuracy, Precision, Recall, F1-Score.
+   - **Results**: Logistic Regression achieved an accuracy of 95.26%.
 
 **Iterative Refinement:**
 - Continuously refine models based on performance and feedback. Incorporate additional data sources as needed.
 
 **Dashboard Development:**
 - Build an intuitive dashboard for users to access predictions and insights.
+
+## Flowchart
+
+graph TD
+    A[Start] --> B[Data Collection]
+    B --> C[Data Preprocessing]
+    C --> D[Exploratory Data Analysis]
+    D --> E[Feature Engineering]
+    E --> F[Model Training]
+    F --> G[Model Evaluation]
+    G --> H{Results}
+    H --> I[Report Findings]
+    H --> J[Advanced Modeling]
+    J --> K[Model Deployment]
+    K --> L[End]
+
