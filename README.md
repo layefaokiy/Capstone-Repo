@@ -57,6 +57,9 @@ Traditional methods of evaluating funding potential often rely on subjective jud
 6. **Funding Rounds Data (funding_rounds.csv):** This dataset includes detailed information about various funding rounds that startups have gone through.
    - **Key Fields:** `id`, `funding_round_id`, `object_id`, `funded_at`, `funding_round_type`, `funding_round_code`, `raised_amount_usd`, `raised_currency_code`, `pre_money_valuation_usd`, `post_money_valuation_usd`, `participants`, `is_first_round`, `is_last_round`, `source_url`, `source_description`, `created_by`, `created_at`, `updated_at`
 
+7. **Objects Data (objects.csv)**: 
+   - This dataset contains information about various objects related to startups and their attributes.
+   - **Key Fields**: `object_id`, `name`, `category_code`, `status`, `founded_at`, `closed_at`, `domain`, `homepage_url`, `city`, `region`, `state_code`, `country_code`, `latitude`, `longitude`, `created_at`, `updated_at`
 
 **Data Quality Concerns:**
 - **Missing Values:** Identified and handled missing values in key fields.
@@ -153,6 +156,53 @@ Traditional methods of evaluating funding potential often rely on subjective jud
 | created_by             | Creator of the record                        |
 | created_at             | Date when the record was created             |
 | updated_at             | Date when the record was last updated        |
+
+### Objects Data
+
+| Field Name          | Description                                                      |
+|---------------------|------------------------------------------------------------------|
+| id                  | Unique identifier for the object                                 |
+| entity_type         | Type of entity (e.g., company, person)                           |
+| entity_id           | Identifier for the entity                                        |
+| parent_id           | Identifier for the parent entity, if applicable                  |
+| name                | Name of the object                                               |
+| normalized_name     | Normalized version of the name                                   |
+| permalink           | URL-friendly version of the name                                 |
+| category_code       | Category code classifying the type of object                     |
+| status              | Current status of the object (e.g., active, closed)              |
+| founded_at          | Date when the object was founded                                 |
+| closed_at           | Date when the object was closed, if applicable                   |
+| domain              | Domain name of the object’s website                              |
+| homepage_url        | URL of the object's homepage                                     |
+| twitter_username    | Twitter username of the object                                   |
+| logo_url            | URL of the object's logo                                         |
+| logo_width          | Width of the object's logo                                       |
+| logo_height         | Height of the object's logo                                      |
+| short_description   | Short description of the object                                  |
+| description         | Detailed description of the object                               |
+| overview            | Overview of the object                                           |
+| tag_list            | List of tags associated with the object                          |
+| country_code        | Country code where the object is located                         |
+| state_code          | State code where the object is located                           |
+| city                | City where the object is located                                 |
+| region              | Region where the object is located                               |
+| first_investment_at | Date of the first investment made by the object                  |
+| last_investment_at  | Date of the last investment made by the object                   |
+| investment_rounds   | Number of investment rounds the object has participated in       |
+| invested_companies  | Number of companies the object has invested in                   |
+| first_funding_at    | Date of the first funding received by the object                 |
+| last_funding_at     | Date of the last funding received by the object                  |
+| funding_rounds      | Number of funding rounds the object has received                 |
+| funding_total_usd   | Total amount of funding received by the object in USD            |
+| first_milestone_at  | Date of the first milestone achieved by the object               |
+| last_milestone_at   | Date of the last milestone achieved by the object                |
+| milestones          | Number of milestones achieved by the object                      |
+| relationships       | Number of relationships the object has                           |
+| created_by          | Identifier of the user who created the record                    |
+| created_at          | Timestamp when the record was created                            |
+| updated_at          | Timestamp when the record was last updated                       |
+
+
 ### Next Steps
 
 **Data Processing:**
